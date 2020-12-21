@@ -10,6 +10,7 @@ COPY entrypoint.sh /opt/
 RUN chmod u+x /opt/entrypoint.sh
 
 # -- set default environment variables -----------------------------------------
+ENV USER_NAME=syncthing
 ENV SYNCTHING_LISTEN_PORT=22000
 ENV SYNCTHING_CONNECT_PORT=22001
 ENV SYNCTHING_GUI_PORT=8384
