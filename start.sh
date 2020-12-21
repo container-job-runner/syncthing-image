@@ -32,6 +32,7 @@ fi
 sed -i "s/{{ SYNCTHING_LISTEN_PORT }}/$SYNCTHING_LISTEN_PORT/g" ~/.config/syncthing/config.xml
 sed -i "s/{{ SYNCTHING_CONNECT_PORT }}/$SYNCTHING_CONNECT_PORT/g" ~/.config/syncthing/config.xml
 sed -i "s/{{ SYNCTHING_GUI_PORT }}/$SYNCTHING_GUI_PORT/g" ~/.config/syncthing/config.xml
+sed -i "s/{{ SYNCTHING_SYNC_DIRECTORY }}/$SYNCTHING_SYNC_DIRECTORY/g" ~/.config/syncthing/config.xml
 
 # -- start syncthing -----------------------------------------------------------
 syncthing -no-browser

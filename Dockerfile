@@ -13,5 +13,6 @@ RUN chmod u+x /opt/entrypoint.sh
 ENV SYNCTHING_LISTEN_PORT=22000
 ENV SYNCTHING_CONNECT_PORT=22001
 ENV SYNCTHING_GUI_PORT=8384
+ENV SYNCTHING_SYNC_DIRECTORY=/home/syncthing/sync-directory
 
 ENTRYPOINT [ "/opt/entrypoint.sh" ]
