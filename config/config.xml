@@ -52,7 +52,7 @@
         <untrusted>false</untrusted>
     </device>
     <gui enabled="true" tls="false" debugging="false">
-        <address>127.0.0.1:8384</address>
+        <address>127.0.0.1:{{ SYNCTHING_GUI_PORT }}</address>
         <user>syncthing</user>
         <password>$2a$10$sXGHlxpQ39taMP9S.UJtr.gbc9EiOotdISB7fwBidjyKw8u91wEpy</password>
         <apikey>md3wGu2ydJgEfeUewxiTrpEUvCmDcdSR</apikey>
