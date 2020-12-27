@@ -12,6 +12,9 @@ else
     useradd -mlo --uid $USER_ID --gid $GROUP_ID $USER_NAME
 fi
 
+# -- chown home and sync directories -------------------------------------------
+# (they are dynamically created by docker/podman and will be owned by root) 
+chown $USER_NAME:$USER_NAME /home/$USER_NAME $SYNCTHING_SYNC_DIRECTORY 
 # -- copy syncthing config -----------------------------------------------------
 mkdir -p /home/$USER_NAME/.config/syncthing/
 cp /opt/syncthing/config/* /home/$USER_NAME/.config/syncthing/
