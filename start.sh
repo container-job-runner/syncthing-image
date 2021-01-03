@@ -14,6 +14,6 @@ sed -i "s/{{ SYNCTHING_SYNC_DIRECTORY }}/$(echo $SYNCTHING_SYNC_DIRECTORY | sed 
 # -- start syncthing -----------------------------------------------------------
 syncthing -no-browser
 
-if [ $? -neq 0 ] ; then
+if [ $? -ne 0 ] ; then
     exit 2
 fi
