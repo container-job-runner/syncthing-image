@@ -24,7 +24,7 @@ autossh -M 0 -f \
 #     -R 127.0.0.1:$SYNCTHING_CONNECT_PORT:127.0.0.1:$SYNCTHING_LISTEN_PORT \
 #     $SSH_USERNAME@$SSH_IP
 
-if [ $? -neq 0 ] ; then
+if [ $? -ne 0 ] ; then
     exit 2
 fi
 
@@ -37,6 +37,6 @@ sed -i "s/{{ SYNCTHING_SYNC_DIRECTORY }}/$(echo $SYNCTHING_SYNC_DIRECTORY | sed 
 # -- start syncthing -----------------------------------------------------------
 syncthing -no-browser
 
-if [ $? != 0 ] ; then
+if [ $? -ne 0 ] ; then
     exit 3
 fi
