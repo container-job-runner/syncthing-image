@@ -34,6 +34,9 @@ sed -i "s/{{ SYNCTHING_CONNECT_PORT }}/$SYNCTHING_CONNECT_PORT/g" ~/.config/sync
 sed -i "s/{{ SYNCTHING_GUI_PORT }}/$SYNCTHING_GUI_PORT/g" ~/.config/syncthing/config.xml
 sed -i "s/{{ SYNCTHING_SYNC_DIRECTORY }}/$(echo $SYNCTHING_SYNC_DIRECTORY | sed -e 's/[\/&]/\\&/g')/g" ~/.config/syncthing/config.xml
 
+# -- manually create .stfolder -------------------------------------------------
+mkdir -p "$SYNCTHING_SYNC_DIRECTORY/.stfolder"
+
 # -- start syncthing -----------------------------------------------------------
 syncthing -no-browser
 
